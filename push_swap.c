@@ -3,31 +3,31 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Define a structure for stack nodes
-/*typedef struct Node {
+// Define a structure for stack t_lists
+/*typedef struct t_list {
     int data;
-    struct Node *next;
-} Node;*/
+    struct t_list *next;
+} t_list;*/
 
 // Push an element onto the stack
-void push(Node **top, int value) {
-    Node *newNode = (Node *)malloc(sizeof(Node));
-    if (!newNode) {
+void push(t_list **top, int value) {
+    t_list *newt_list = (t_list *)malloc(sizeof(t_list));
+    if (!newt_list) {
         printf("Heap overflow!\n");
         return;
     }
-    newNode->data = value;
-    newNode->next = *top;
-    *top = newNode;
+    newt_list->data = value;
+    newt_list->next = *top;
+    *top = newt_list;
 }
 
 // Pop an element from the stack
-int pop(Node **top) {
+int pop(t_list **top) {
     if (*top == NULL) {
         printf("Stack underflow!\n");
         return -1;
     }
-    Node *temp = *top;
+    t_list *temp = *top;
     int value = temp->data;
     *top = temp->next;
     free(temp);
@@ -35,7 +35,7 @@ int pop(Node **top) {
 }
 
 // Peek at the top element
-int peek(Node *top) {
+int peek(t_list *top) {
     if (top == NULL) {
         printf("Stack is empty!\n");
         return -1;
@@ -44,7 +44,7 @@ int peek(Node *top) {
 }
 
 // Print the stack
-void print_stack(Node *top) {
+void print_stack(t_list *top) {
     printf("Stack: ");
     while (top) {
         printf("%d ", top->data);
@@ -54,7 +54,7 @@ void print_stack(Node *top) {
 }
 
 int main() {
-    Node *stack = NULL;
+    t_list *stack = NULL;
 
     push(&stack, 3);
     push(&stack, 6);

@@ -6,13 +6,13 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-/*typedef struct s_list {
+typedef struct s_list {
     int data;
     struct s_list *next;
-} t_list;*/
-typedef struct Node {
+} t_list;
+/*typedef struct Node {
     int data;
     struct Node *next;
-} Node;
+} Node;*/
 
 #endif

@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-void pa(Node **stackA, Node **stackB) {
+void pa(t_list **stackA, t_list **stackB) {
     if (*stackB == NULL)
         return; // Do nothing if B is empty
 
@@ -8,7 +8,7 @@ void pa(Node **stackA, Node **stackB) {
     push(stackA, value);
 }
 
-void pb(Node **stackA, Node **stackB) {
+void pb(t_list **stackA, t_list **stackB) {
     if (*stackA == NULL)
         return; // Do nothing if A is empty
 
