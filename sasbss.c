@@ -27,7 +27,7 @@ void sb(t_list **stack, int is_impostor) {
     second->next = first;
     *stack = second;
     if (!is_impostor)
-        write(1, "sa\n", 3);
+        write(1, "sb\n", 3);
 }
 
 void ss(t_list **stackA, t_list **stackB) {

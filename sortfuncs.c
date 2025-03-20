@@ -29,7 +29,7 @@ void    sort_three(t_list **stack)
     else if (a < b && b > c && a > c)
         rra(stack);
 }
-
+/*
 int     find_smallest_position(t_list *stack)
 {
     t_list  *current = stack;
@@ -62,7 +62,7 @@ void    push_smallest_to_b(t_list **stackA, t_list **stackB, int size)
         while (pos++ < size)
             rra(stackA);
     pb(stackA, stackB);
-}
+}*/
 
 void    sort_four(t_list **stackA, t_list **stackB)
 {
