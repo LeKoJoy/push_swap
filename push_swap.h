@@ -6,9 +6,12 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-typedef struct s_list {
-    int data;
-    struct s_list *next;
+typedef struct s_stack
+{
+    int data;          // Значение узла
+    int index;        // Индекс узла
+    int position;     // Положение узла (0 или 1)
+    struct s_stack *next; // Указатель на следующий узел
 } t_list;
 /*typedef struct Node {
     int data;

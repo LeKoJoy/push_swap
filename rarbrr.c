@@ -41,5 +41,5 @@ void rb(t_list **stack) {
 void rr(t_list **stackA, t_list **stackB) {
     ra(stackA);
     rb(stackB);
-	write(1, "ra\n", 3);
+	write(1, "rr\n", 3);
 }

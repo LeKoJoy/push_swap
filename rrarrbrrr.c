@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-void rra(t_list **stack) {
+void revrot(t_list **stack) {
     if (*stack == NULL || (*stack)->next == NULL)
         return; // Do nothing if stack has 0 or 1 elements
 
@@ -19,8 +19,14 @@ void rra(t_list **stack) {
     *stack = last; // Update top of stack
 }
 
+void rra(t_list **stack) {
+    revrot(stack);
+    write(1, "rra\n", 4);
+}
+
 void rrb(t_list **stack) {
-    rra(stack);
+    revrot(stack);
+    write(1, "rrb\n", 4);
 }
 
 void rrr(t_list **stackA, t_list **stackB) {
