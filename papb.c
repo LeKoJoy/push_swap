@@ -1,17 +1,18 @@
 #include "push_swap.h"
 
-void pa(t_list **stackA, t_list **stackB) {
-    if (*stackB == NULL)
-        return; // Do nothing if B is empty
-
-    int value = pop(stackB);
-    push(stackA, value);
-}
-
-void pb(t_list **stackA, t_list **stackB) {
-    if (*stackA == NULL)
-        return; // Do nothing if A is empty
-
-    int value = pop(stackA);
-    push(stackB, value);
+void	pa_pb(t_list **stack_dest, t_list **stack_src, char str)
+{
+	t_list	*start;
+	
+	if (*stack_src)
+	{
+		start = (*stack_src);
+		(*stack_src) = start -> next;
+		start -> next = (*stack_src);
+		add_front(stack_dest, start);
+		if (str == 'a')
+			printf("pa\n");
+		else if (str == 'b')
+			printf("pb\n");
+	}
 }

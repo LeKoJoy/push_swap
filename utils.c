@@ -72,3 +72,4 @@ static void	*ft_free(char **result, size_t i)
 	free(result);
 	return (NULL);
 }
+
